@@ -1,0 +1,34 @@
+<!-- <p>faq works!</p> -->
+
+<!-- <div class="faq-container">
+    <h2>FAQ (Foire Aux Questions)</h2>
+    <div class="faq-item" *ngFor="let faq of faqs" (click)="toggleFaq(faq)">
+      <div class="faq-question">
+        <h3>{{ faq.question }}</h3>
+        <i class="fas" [ngClass]="{'fa-chevron-down': !faq.open, 'fa-chevron-up': faq.open}"></i>
+      </div>
+      <div class="faq-answer" [ngClass]="{'open': faq.open}">
+        <p>{{ faq.answer }}</p>
+      </div>
+    </div>
+</div> -->
+
+
+<!-- about.component.html -->
+<div class="about-page">
+    <h1>À propos de notre projet de prédiction du cancer</h1>
+    <p>Votre projet de prédiction du cancer utilise des données multi-omiques pour fournir des prédictions précises sur les résultats du traitement.</p>
+  
+    <!-- Autres sections de votre page À propos -->
+  
+    
+    <!-- Section FAQ intégrée via le composant -->
+    <div class="faq-container">
+        <app-faq></app-faq>
+    </div>
+    <!-- Fin de la section FAQ -->
+  
+    <!-- Autres sections de votre page À propos -->
+</div>
+  
+  

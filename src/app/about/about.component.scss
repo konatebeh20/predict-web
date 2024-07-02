@@ -1,0 +1,34 @@
+.about-page {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #2c3e50;
+}
+
+.about-page h1,
+.about-page h2,
+.about-page h3 {
+    color: #34495e;
+}
+
+.about-page a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.about-page a:hover {
+    text-decoration: underline;
+}
+
+.faq h3,
+.news h3 {
+    margin-top: 15px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}

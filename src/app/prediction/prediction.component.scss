@@ -1,0 +1,73 @@
+/* Appliquez une couleur d'arrière-plan au formulaire */
+form {
+    background-color: #AB875F; /* Remplacez par la couleur de votre choix */
+    padding: 20px; /* Espacement interne pour le contenu du formulaire */
+    border-radius: 8px; /* Coins arrondis pour le formulaire */
+    /* Ajoutez d'autres styles selon vos besoins */
+}
+
+#main-container-personal, #main-container-multi-omics{
+    background-color: #2A364E;
+    padding: 20px; 
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+#main-container-personal h2, #main-container-multi-omics h2,
+#main-container-personal label, #main-container-multi-omics label,
+#main-container-personal input[type="text"], #main-container-multi-omics input[type="text"] {
+    color: #FFFFFF; /* Texte blanc */
+}
+
+
+/* Appliquez les styles à la classe "row" */
+.row {
+    display: flex;
+    justify-content: space-between;
+    /* Ajoutez d'autres styles selon vos besoins */
+}
+
+/* Appliquez les styles à la classe "col" */
+.col {
+    flex: 1;
+    margin-right: 50px;
+    /* Ajoutez d'autres styles selon vos besoins */
+}
+
+/* Appliquez une couleur d'arrière-plan à tous les champs de saisie */
+input[type=text], input[type=password], input[type=number] {
+    background-color: #3CBC8D; /* Remplacez par la couleur de votre choix */
+    color: white; /* Couleur du texte */
+    border: 2px solid red; /* Bordure (facultatif) */
+    border-radius: 4px; /* Coins arrondis (facultatif) */
+    padding: 12px 20px; /* Espacement interne (facultatif) */
+    margin: 8px 0; /* Espacement externe (facultatif) */
+    box-sizing: border-box; /* Inclut la bordure et le padding dans les dimensions totales */
+}
+
+/* Supprimez le contour bleu lorsqu'un champ de saisie est sélectionné */
+input[type=text]:focus, input[type=password]:focus, input[type=number]:focus {
+    outline: none;
+    background-color: lightblue; /* Couleur d'arrière-plan lorsqu'il est sélectionné */
+}
+
+.prediction-button {
+    text-align: center; /* Centre le bouton */
+    margin-top: 20px; /* Espacement en haut */
+}
+
+.prediction-button button {
+    width: 100%;
+    background-color: #4CAF50; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    padding: 10px 20px; /* Espacement intérieur */
+    font-size: 16px; /* Taille de la police */
+    border: none; /* Supprime la bordure */
+    border-radius: 5px; /* Arrondi des coins */
+    cursor: pointer; /* Curseur indiquant un élément cliquable */
+    transition: background-color 0.3s ease; /* Animation de transition */
+}
+
+.prediction-button button:hover {
+    background-color: #45a049; /* Couleur de fond au survol */
+}

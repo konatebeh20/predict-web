@@ -1,1 +1,26 @@
-/* You can add global styles to this file, and also import other style files */
+html, body {
+    height: 100%;
+    margin: 0; /* Supprimer les marges par défaut */
+}
+
+body {
+    background-image: url('assets/background.jpg');
+    background-size: cover; /* Pour que l'image couvre toute la surface */
+    background-repeat: no-repeat; /* Pour éviter que l'image se répète */
+    background-attachment: fixed; /* Pour que l'image reste fixe lors du défilement */
+    background-position: center; /* Pour centrer l'image */
+    display: flex;
+    flex-direction: column;
+}/* You can add global styles to this file, and also import other style files */
+
+.main-content {
+    flex: 1;
+    padding: 20px; /* Ajuste le padding selon tes besoins */
+    background: rgba(255, 255, 255, 0.8); /* Ajoute un fond blanc semi-transparent pour améliorer la lisibilité */
+    border-radius: 8px; /* Ajoute des coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajoute une ombre légère pour un effet d'élévation */
+    margin: 20px auto; /* Centrer le conteneur horizontalement */
+    max-width: 1200px; /* Limiter la largeur maximale */
+    width: 100%;
+}
+  

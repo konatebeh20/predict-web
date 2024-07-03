@@ -1,109 +1,114 @@
-<!-- <p>prediction works!</p> -->
+    <!-- <p>prediction works!</p> -->
 
-<!-- <form action="/votre-page-de-traitement" method="post">
-pour le traitement on fera avec /votre-page-de-traitement oun on remplacera par le lien adequat
-</form> -->
+    <!-- <form action="/votre-page-de-traitement" method="post">
+    pour le traitement on fera avec /votre-page-de-traitement oun on remplacera par le lien adequat
+    </form> -->
 
-<form action="#" method="post">
-    <div id="main-container-personal">
-        <!-- Section Informations personnelles -->
-        <div class="personal-info row"> 
-            <!-- ... -->
-            <h2 style="text-align: center;">Informations personnelles cliniques</h2>
-    
-            <div class="col-md-4 mb-3">
-                <label for="first_name">Nom :</label>
-                <input type="text" id="first_name" name="first_name" required>
-            </div>
-    
-            <div class="col-md-6 mb-3">
-                <label for="last_name">Prénom :</label>
-                <input type="text" id="last_name" name="last_name" required>
-            </div>
+    <form action="#" method="post">
+        <div id="main-container-personal">
+            <!-- Section Informations personnelles -->
+            <div class="personal-info row"> 
+                <!-- ... -->
+                <h2 style="text-align: center;">Informations personnelles cliniques</h2>
+        
+                <div class="col-md-4 mb-3">
+                    <label for="first_name">Nom :</label>
+                    <input type="text" id="first_name" name="first_name" required>
+                </div>
+        
+                <div class="col-md-6 mb-3">
+                    <label for="last_name">Prénom :</label>
+                    <input type="text" id="last_name" name="last_name" required>
+                </div>
 
-            <div class="col-md-6 mb-3">
-                <label for="sex">sexe :</label>
-                <input type="text" id="sex" name="sex" required>
+                <!-- <div class="col-md-6 mb-3">
+                    <label for="sex">sexe :</label>
+                    <input type="text" id="sex" name="sex" required>
+                </div> -->
+        
+                <div class="col-md-12 mb-3">
+                    <label>Sexe :</label><br>
+                    <label><input type="radio" name="sex" value="F" required>Femme </label>
+                    <label style="margin-left: 10px;"><input type="radio" name="sex" value="H" required> Homme</label>
+                </div>
+        
+                <div class="col-md-6 mb-3">
+                    <label for="date_of_birth">Date de naissance :</label>
+                    <input type="text" id="date_of_birth" name="date_of_birth" required>
+                </div>
+        
+                
+                <div class="col-md-6 mb-3">
+                    <label for="tumer_size">Taille de la tumeur :</label>
+                    <input type="text" id="tumer_size" name="tumer_size" required>
+                </div>    
+        
+                <div class="col-md-6 mb-3">
+                    <label for="other_var">Autres variables :</label>
+                    <input type="text" id="other_var" name="other_var" required>         
+                </div>
+        
+                <!-- <div class="col-md-4">
+                    Ajoutez d'autres champs ici (nom, date de naissance, sexe, etc.)
+                </div> -->
+        
             </div>
-    
-    
-            <div class="col-md-6 mb-3">
-                <label for="date_of_birth">Date de naissance :</label>
-                <input type="text" id="date_of_birth" name="date_of_birth" required>
-            </div>
-    
-            
-            <div class="col-md-6 mb-3">
-                <label for="sex">Taille de la tumeur :</label>
-                <input type="text" id="sex" name="sex" required>
-            </div>    
-    
-            <div class="col-md-6 mb-3">
-                <label for="sex">Autres variables :</label>
-               <input type="text" id="sex" name="sex" required>         
-            </div>
-    
-            <!-- <div class="col-md-4">
-                Ajoutez d'autres champs ici (nom, date de naissance, sexe, etc.)
-            </div> -->
-    
         </div>
-    </div>
 
-    <div id="main-container-multi-omics">
-        <!-- Section Données multi-omiques et cliniques -->
-        <div class="multi-omics row">
-            <!-- ... -->
-            <h2 style="text-align: center;">Données multi-omiques et cliniques</h2>
-    
-            <div class="col-md-6 mb-3">
-                <label for="genomic_data">Données génomiques :</label>
-                <input type="file" id="genomic_data" name="genomic_data" accept=".csv">
+        <div id="main-container-multi-omics">
+            <!-- Section Données multi-omiques et cliniques -->
+            <div class="multi-omics row">
+                <!-- ... -->
+                <h2 style="text-align: center;">Données multi-omiques et cliniques</h2>
+        
+                <div class="col-md-6 mb-3">
+                    <label for="genomic_data">Données génomiques :</label>
+                    <input type="file" style="margin-left: 5px;" id="genomic_data" name="genomic_data" accept=".csv">
+                </div>
+        
+                <div class="col-md-6 mb-3">
+                    <label for="transcriptomiques_data">Données transcriptomiques :</label>
+                    <input type="file" style="margin-left: 5px;" id="transcriptomiques_data" name="transcriptomiques_data" accept=".csv">
+                </div>
+                
+                <div class="col-md-6 mb-3">
+                    <label for="metabolomiques_data">Données métabolomiques :</label>
+                    <input type="file" style="margin-left: 5px;" id="metabolomiques_data" name="metabolomiques_data" accept=".csv">
+                </div>
+        
+                <div class="col-md-6 mb-3">
+                    <label for="proteomiques_data">Données protéomiques :</label>
+                    <input type="file" style="margin-left: 5px;" id="proteomiques_data" name="proteomiques_data" accept=".csv">
+                </div>
+        
+                <div class="col-md-6 mb-3">
+                    <label for="epigenomiques_data">Données épigénomiques :</label>
+                    <input type="file" style="margin-left: 5px;" id="epigenomiques_data" name="epigenomiques_data" accept=".csv">
+                </div>
+                
+                <div class="col-md-6 mb-3">
+                    <label for="microbiomiquees_data">Données microbiomiques :</label>
+                    <input type="file" style="margin-left: 5px;" id="microbiomiquees_data" name="microbiomiquees_data" accept=".csv">
+                </div>
+                
+                <!-- <div class="col">
+                    <label for="téléversement_fichiers_data">Téléversement de Fichiers :</label>
+                    <input type="file" style="margin-left: 5px;" id="téléversement_fichiers_data" name="téléversement_fichiers_data" accept=".csv">
+                </div> -->
+        
+                <!-- <div class="col">
+                    Ajoutez d'autres champs ici (transcriptomiques, métabolomiques, etc.)
+                </div> -->
+                
             </div>
-    
-            <div class="col-md-6 mb-3">
-                <label for="transcriptomiques_data">Données transcriptomiques :</label>
-                <input type="file" id="transcriptomiques_data" name="transcriptomiques_data" accept=".csv">
-            </div>
-            
-            <div class="col-md-6 mb-3">
-                <label for="metabolomiques_data">Données métabolomiques :</label>
-                <input type="file" id="metabolomiques_data" name="metabolomiques_data" accept=".csv">
-            </div>
-    
-            <div class="col-md-6 mb-3">
-                <label for="proteomiques_data">Données protéomiques :</label>
-                <input type="file" id="proteomiques_data" name="proteomiques_data" accept=".csv">
-            </div>
-    
-            <div class="col-md-6 mb-3">
-                <label for="epigenomiques_data">Données épigénomiques :</label>
-                <input type="file" id="epigenomiques_data" name="epigenomiques_data" accept=".csv">
-            </div>
-            
-            <div class="col-md-6 mb-3">
-                <label for="microbiomiquees_data">Données microbiomiques :</label>
-                <input type="file" id="microbiomiquees_data" name="microbiomiquees_data" accept=".csv">
-            </div>
-            
-            <!-- <div class="col">
-                <label for="téléversement_fichiers_data">Téléversement de Fichiers :</label>
-                <input type="file" id="téléversement_fichiers_data" name="téléversement_fichiers_data" accept=".csv">
-            </div> -->
-    
-            <!-- <div class="col">
-                Ajoutez d'autres champs ici (transcriptomiques, métabolomiques, etc.)
-            </div> -->
-             
         </div>
-    </div>
 
-    <!-- Bouton de prédiction -->
-    <div class="prediction-button">
-        <!-- ... -->
-        <button type="submit">Prédire</button>
-    </div>
+        <!-- Bouton de prédiction -->
+        <div class="prediction-button">
+            <!-- ... -->
+            <button type="submit">Prédire</button>
+        </div>
 
-    <!-- Affichage des résultats de la prédiction -->
-    <div id="prediction_result"></div>
-</form>
+        <!-- Affichage des résultats de la prédiction -->
+        <div id="prediction_result"></div>
+    </form>

@@ -1,22 +1,94 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    max-width: 750px;
+    margin: 0 auto;
+    //background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333333;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
 /* Appliquez une couleur d'arrière-plan au formulaire */
 form {
     // background-color: #AB875F; /* Remplacez par la couleur de votre choix */
+    display: flex;
+    flex-direction: column;
     padding: 20px; /* Espacement interne pour le contenu du formulaire */
     border-radius: 8px; /* Coins arrondis pour le formulaire */
     /* Ajoutez d'autres styles selon vos besoins */
 }
 
-#main-container-personal {
-    // background-color: #AB875F; /* Couleur de fond */
-    padding: 20px; /* Espacement intérieur */
-    border-radius: 8px; /* Coins arrondis */
-    margin-bottom: 20px;
+.form-group {
+    margin-bottom: 15px;
 }
 
-#main-container-personal, #main-container-multi-omics{
-    // background-color: #AB875F;
-    padding: 20px; 
-    border-radius: 8px;
+.form-group label {
+    // color: #333;
+    color: #555555;
+    font-size: 16px;
+    margin-top: 10px;
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    // border: 1px solid #cccccc;
+    border-radius: 4px;
+    // border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+// label{
+
+// }
+
+textarea {
+    resize: vertical;
+}
+
+select {
+    background-color: #ffffff9f;
+    border: 2px solid #ffffff9f;
+    border-radius: 9px;
+    padding: 12px 20px;
+    margin: 8px 0; 
+    box-sizing: border-box; 
+    margin-left: 5px;
+}
+
+#main-container-personal,
+#clinical_data,
+#genomical_data,
+#biomarqueurs_data,
+#genomical_file_data {
+    //background-color: #AB875F; /* Couleur de fond */
+    padding: 20px; /* Espacement intérieur */
+    border-radius: 8px; /* Coins arrondis */
     margin-bottom: 20px;
 }
 
@@ -29,7 +101,7 @@ form {
 
 
 /* Appliquez les styles à la classe "row" */
-.row {
+personal-info.row {
     display: flex;
     justify-content: space-between;
     /* Ajoutez d'autres styles selon vos besoins */
@@ -42,10 +114,46 @@ form {
     /* Ajoutez d'autres styles selon vos besoins */
 }
 
+button.prediction-button {
+    display: inline-block;
+    width: 100%; /* Change this to auto to reduce size */
+    padding: 10px; /* Adjust padding for desired size */
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 19px;
+    text-align: center;
+}
+
+button.prediction-button:hover {
+    background-color: #0056b3;
+}
+
+// button[type="submit"] {
+//     display: block;
+//     width: 100%;
+//     padding: 10px;
+//     padding: 10px 20px
+//     background-color: #007bff;
+//     color: white;
+//     border: none;
+//     border-radius: 25px;
+//     cursor: pointer;
+//     font-size: 19px;
+//     text-align: center;
+// }
+
+// button[type="submit"]:hover {
+//     background-color: #0056b3;
+// }
+
+
 /* Appliquez une couleur d'arrière-plan à tous les champs de saisie */
 input[type=text], input[type=password], input[type=number] {
     background-color: #ffffff9f; /* Remplacez par la couleur de votre choix */
-    color: white; /* Couleur du texte */
+    color: rgb(0, 0, 0); /* Couleur du texte */
     border: 2px solid #ffffff9f;
     // border: 2px solid red; /* Bordure (facultatif) */
     border-radius: 9px; /* Coins arrondis (facultatif) */
@@ -67,13 +175,31 @@ input[type="radio"] {
     vertical-align: middle; /* Alignement vertical au centre */
 }
 
-label {
-    font-size: 16px; /* Taille de la police */
-    color: #333; /* Couleur du texte */
+.selection{
+    background-color: #ffffff9f; /* Remplacez par la couleur de votre choix */
+    color: rgb(0, 0, 0); /* Couleur du texte */
+    border: 2px solid #ffffff9f;
+    // border: 2px solid red; /* Bordure (facultatif) */
+    border-radius: 9px; /* Coins arrondis (facultatif) */
+    padding: 12px 20px; /* Espacement interne (facultatif) */
+    margin: 8px 0; /* Espacement externe (facultatif) */
+    box-sizing: border-box; /* Inclut la bordure et le padding dans les dimensions totales */
+    margin-left: 5px;
 }
 
-.col-md-12.mb-3 {
+.gender {
+    color: white; 
+    border-radius: 9px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    margin-left: 5px;
+
+}
+
+.col-md-12 .mb-3 {
     margin-bottom: 20px; /* Espacement sous le conteneur */
+    color: #555555;
 }
 
 .prediction-button {
@@ -82,19 +208,26 @@ label {
 }
 
 .prediction-button button {
+    margin-top: 20px;
     // width: 100%;
     width: 20%;
-    background-color: #2da533;
-        // background-color: #4CAF50;
+    // background-color: #2da533;
+    background-color: #007bff;
+    // background-color: #4CAF50;
     color: white; /* Couleur du texte */
+    // color: #ffffff;
     padding: 10px 20px; /* Espacement intérieur */
+    padding: 10px; 
     font-size: 16px; /* Taille de la police */
     border: none; /* Supprime la bordure */
     border-radius: 5px; /* Arrondi des coins */
+    font-size: 16px;
     cursor: pointer; /* Curseur indiquant un élément cliquable */
     transition: background-color 0.3s ease; /* Animation de transition */
 }
 
 .prediction-button button:hover {
-    background-color: #0cc20c;  /* Couleur de fond au survol */
+    // background-color: #0cc20c;  /* Couleur de fond au survol */
+    background-color: #0056b3;
 }
+

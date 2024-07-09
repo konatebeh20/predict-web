@@ -4,111 +4,251 @@
     pour le traitement on fera avec /votre-page-de-traitement oun on remplacera par le lien adequat
     </form> -->
 
-    <form action="#" method="post">
-        <div id="main-container-personal">
-            <!-- Section Informations personnelles -->
-            <div class="personal-info row"> 
-                <!-- ... -->
-                <h2 style="text-align: center;">Informations personnelles cliniques</h2>
-        
-                <div class="col-md-4 mb-3">
-                    <label for="first_name">Nom :</label>
-                    <input type="text" id="first_name" name="first_name" required>
-                </div>
-        
-                <div class="col-md-6 mb-3">
-                    <label for="last_name">Prénom :</label>
-                    <input type="text" id="last_name" name="last_name" required>
-                </div>
+    <div class="container">
 
-                <!-- <div class="col-md-6 mb-3">
-                    <label for="sex">sexe :</label>
-                    <input type="text" id="sex" name="sex" required>
-                </div> -->
-        
-                <div class="col-md-12 mb-3">
-                    <label>Sexe :</label><br>
-                    <label><input type="radio" name="sex" value="F" required>Femme </label>
-                    <label style="margin-left: 10px;"><input type="radio" name="sex" value="H" required> Homme</label>
+        <h1>Formulaire de Prédiction du Cancer</h1>
+        <form action="#" method="post" id="cancerPredictionForm">
+            <div id="main-container-personal">
+                <!-- Section Informations personnelles -->
+                <div class="personal-info row">
+
+                    <h2 style="text-align: center;">Informations Générales</h2>
+
+                    <div class="col-md-6 mb-3 form-group ">
+                        <label class="form-label" for="patientName">Nom du Patient:</label>
+                        <input type="text" id="patientName" name="patientName" required>
+                    </div>
+    
+                    <div class="col-md-6 mb-3 form-group ">
+                        <label class="form-label" for="patientId">Identifiant du Patient:</label>
+                        <input type="text" id="patientId" name="patientId" required>
+                    </div>
+    
+                    <div class="col-md-12 mb-3 form-group ">
+                        <label class="form-label" for="patientAge">Âge du Patient:</label>
+                        <input type="number" id="patientAge" name="patientAge" required>
+                    </div>
+    
+                    <div class="col-md-12 mb-3 form-group ">
+                        <label class="form-label" for="patientGender">Sexe :</label>
+                        <select class="selection" id="patientGender" name="patientGender" required>
+                            <option value="">Sélectionnez</option>
+                            <option value="male">Masculin</option>
+                            <option value="female">Féminin</option>
+                        </select>
+                         <!-- <div class="col-md-4">
+                            Ajoutez d'autres champs ici (nom, date de naissance, sexe, etc.)
+                        </div> -->
+                    </div>
                 </div>
-        
-                <div class="col-md-6 mb-3">
-                    <label for="date_of_birth">Date de naissance :</label>
-                    <input type="text" id="date_of_birth" name="date_of_birth" required>
-                </div>
-        
-                
-                <div class="col-md-6 mb-3">
-                    <label for="tumer_size">Taille de la tumeur :</label>
-                    <input type="text" id="tumer_size" name="tumer_size" required>
-                </div>    
-        
-                <div class="col-md-6 mb-3">
-                    <label for="other_var">Autres variables :</label>
-                    <input type="text" id="other_var" name="other_var" required>         
-                </div>
-        
-                <!-- <div class="col-md-4">
-                    Ajoutez d'autres champs ici (nom, date de naissance, sexe, etc.)
-                </div> -->
-        
             </div>
-        </div>
 
-        <div id="main-container-multi-omics">
-            <!-- Section Données multi-omiques et cliniques -->
-            <div class="multi-omics row">
-                <!-- ... -->
-                <h2 style="text-align: center;">Données multi-omiques et cliniques</h2>
-        
-                <div class="col-md-6 mb-4">
-                    <label for="genomic_data">Données génomiques :</label>
-                    <input type="file" style="margin-left: 5px;" id="genomic_data" name="genomic_data" accept=".csv">
+            <div id="main-container-clinical_data">
+                <h2 style="text-align: center;">Données Cliniques</h2>
+                <div class="row form-group ">
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label" for="symptoms">Symptômes:</label>
+                        <textarea id="symptoms" name="symptoms" rows="4" required></textarea>
+                    </div> 
+    
+                    <div class="col-md-6 mb-3 form-group ">
+                        <label class="form-label" for="testResults">Résultats des Tests (ex: CA-125, PSA):</label>
+                        <textarea id="testResults" name="testResults" rows="4" required></textarea>
+                    </div>
+    
+                    <div class="col-md-12 mb-3 form-group ">
+                        <label class="form-label" for="tumorSize">Taille de la Tumeur (cm):</label>
+                        <input type="number" id="tumorSize" name="tumorSize" required>
+                    </div>
+    
+                    <div class="col-md-6 mb-3 form-group ">
+                        <label class="form-label" for="lymphNodeStatus">Statut des Ganglions Lymphatiques:</label>
+                        <select id="lymphNodeStatus" name="lymphNodeStatus" required>
+                            <option value="">Sélectionnez</option>
+                            <option value="positive">Positif</option>
+                            <option value="negative">Négatif</option>
+                        </select>
+                    </div>
+    
+                    <div class="col-md-6 mb-3 form-group ">
+                        <label class="form-label" for="estrogenReceptor">Récepteur aux Œstrogènes:</label>
+                        <select id="estrogenReceptor" name="estrogenReceptor" required>
+                            <option value="">Sélectionnez</option>
+                            <option value="positive">Positif</option>
+                            <option value="negative">Négatif</option>
+                        </select>
+                    </div>
+    
+                    <div class="col-md-6 mb-3 form-group ">
+                        <label class="form-label" for="progesteroneReceptor">Récepteur à la Progestérone:</label>
+                        <select id="progesteroneReceptor" name="progesteroneReceptor" required>
+                            <option value="">Sélectionnez</option>
+                            <option value="positive">Positif</option>
+                            <option value="negative">Négatif</option>
+                        </select>
+                    </div>
+    
+                    <div class="col-md-6 mb-3 form-group ">
+                        <label class="form-label" for="her2Status">Statut HER2:</label>
+                        <select id="her2Status" name="her2Status" required>
+                            <option value="">Sélectionnez</option>
+                            <option value="positive">Positif</option>
+                            <option value="negative">Négatif</option>
+                        </select>
+                    </div>
                 </div>
-        
-                <div class="col-md-6 mb-4">
-                    <label for="transcriptomiques_data">Données transcriptomiques :</label>
-                    <input type="file" style="margin-left: 5px;" id="transcriptomiques_data" name="transcriptomiques_data" accept=".csv">
-                </div>
+            </div>
+
+            <div id="main-container-genomical_data">
+                <h2>Données Génomiques</h2>
+                <div class="row">
+
+                    <div class="col-md-6 mb-3 form-group ">
+                        <label class="form-label" for="gene1">Gene 1:</label>
+                        <input type="text" id="gene1" name="gene1" required>
+                    </div>
+
+
+                    <div class="col-md-6 mb-3 form-group ">
+                        <label class="form-label" for="gene1">Gene 1:</label>
+                        <input type="text" id="gene1" name="gene1" required>
+                    </div>
+    
+                    <div class="col-md-6 mb-3 form-group ">
+                        <label class="form-label" for="gene2">Gene 2:</label>
+                        <input type="text" id="gene2" name="gene2" required>
+                    </div>
+    
+                    <div class="col-md-6 mb-3 form-group ">
+                        <label class="form-label" for="protein1">Protéine 1:</label>
+                        <input type="text" id="protein1" name="protein1" required>
+                    </div>
+    
+                    <div class="col-md-6 mb-3 form-group ">
+                        <label class="form-label" for="protein2">Protéine 2:</label>
+                        <input type="text" id="protein2" name="protein2" required>
+                    </div>
+    
+                    <div class="col-md-6 mb-3 form-group ">
+                        <label class="form-label" for="protein3">Protéine 3:</label>
+                        <input type="text" id="protein3" name="protein3" required>
+                    </div>
+    
+                    <div class="col-md-6 mb-3 form-group ">
+                        <label class="form-label" for="protein4">Protéine 4:</label>
+                        <input type="text" id="protein4" name="protein4" required>
+                    </div>
+    
+                    <div class="col-md-6 mb-3 form-group ">
+                        <label class="form-label" for="protein5">Protéine 5:</label>
+                        <input type="text" id="protein5" name="protein5" required>
+                    </div>
+
+                    <div class="col-md-12 mb-3 form-group ">
+                        <label class="form-label" for="geneticMutations">Gènes spécifiques (ex: BRCA1, BRCA2):</label>
+                        <textarea id="geneticMutations" name="geneticMutations" rows="4" required></textarea>
+                    </div>
+
+                    <div class="col-md-12 mb-3 form-group ">
+                        <label class="form-label" for="geneticMutations">Protéines:</label>
+                        <textarea id="geneticMutations" name="geneticMutations" rows="4" required></textarea>
+                    </div>
+
+                    <div class="col-md-12 mb-3 form-group ">
+                        <label class="form-label" for="geneticMutations">Mutations Génétiques</label>
+                        <textarea id="geneticMutations" name="geneticMutations" rows="4" required></textarea>
+                    </div>
+
+                    <div id="main-container-genomical_file_data" class="col-md-12 mb-3 form-group ">
+                        <label class="form-label" for="genomicDataFile">Fichier de Données Génomiques:</label>
+                        <input type="file" id="genomicDataFile" name="genomicDataFile" accept=".csv,.txt" required>
+                    </div>
+    
+                    <!-- <div id="main-container-multi-omics">
+                    <div class="multi-omics row">
+                        <h2 style="text-align: center;">Données multi-omiques et cliniques</h2>
                 
-                <div class="col-md-6 mb-4">
-                    <label for="metabolomiques_data">Données métabolomiques :</label>
-                    <input type="file" style="margin-left: 5px;" id="metabolomiques_data" name="metabolomiques_data" accept=".csv">
-                </div>
-        
-                <div class="col-md-6 mb-4">
-                    <label for="proteomiques_data">Données protéomiques :</label>
-                    <input type="file" style="margin-left: 5px;" id="proteomiques_data" name="proteomiques_data" accept=".csv">
-                </div>
-        
-                <div class="col-md-6 mb-4">
-                    <label for="epigenomiques_data">Données épigénomiques :</label>
-                    <input type="file" style="margin-left: 5px;" id="epigenomiques_data" name="epigenomiques_data" accept=".csv">
-                </div>
+                        <div class="col-md-6 mb-4">
+                            <label class="form-label" for="genomic_data">Données génomiques :</label>
+                            <input type="file" style="margin-left: 5px;" id="genomic_data" name="genomic_data" accept=".csv">
+                        </div>
                 
-                <div class="col-md-6 mb-4">
-                    <label for="microbiomiquees_data">Données microbiomiques :</label>
-                    <input type="file" style="margin-left: 5px;" id="microbiomiquees_data" name="microbiomiquees_data" accept=".csv">
-                </div>
+                        <div class="col-md-6 mb-4">
+                            <label class="form-label" for="transcriptomiques_data">Données transcriptomiques :</label>
+                            <input type="file" style="margin-left: 5px;" id="transcriptomiques_data" name="transcriptomiques_data" accept=".csv">
+                        </div>
+                        
+                        <div class="col-md-6 mb-4">
+                            <label class="form-label" for="metabolomiques_data">Données métabolomiques :</label>
+                            <input type="file" style="margin-left: 5px;" id="metabolomiques_data" name="metabolomiques_data" accept=".csv">
+                        </div>
                 
-                <!-- <div class="col-md-6 mb-4">
-                    <label for="téléversement_fichiers_data">Téléversement de Fichiers :</label>
+                        <div class="col-md-6 mb-4">
+                            <label class="form-label" for="proteomiques_data">Données protéomiques :</label>
+                            <input type="file" style="margin-left: 5px;" id="proteomiques_data" name="proteomiques_data" accept=".csv">
+                        </div>
+                
+                        <div class="col-md-6 mb-4">
+                            <label class="form-label" for="epigenomiques_data">Données épigénomiques :</label>
+                            <input type="file" style="margin-left: 5px;" id="epigenomiques_data" name="epigenomiques_data" accept=".csv">
+                        </div>
+                        
+                        <div class="col-md-6 mb-4">
+                            <label class="form-label" for="microbiomiquees_data">Données microbiomiques :</label>
+                            <input type="file" style="margin-left: 5px;" id="microbiomiquees_data" name="microbiomiquees_data" accept=".csv">
+                        </div>
+                    
+                        
+                    </div>
+                </div> -->
+                </div>
+            </div>
+
+            <div id="main-container-biomarqueurs_data">
+                <h2>Autres Biomarqueurs</h2>
+                <div class="row">
+                    <div class="col-md-6 mb-3 form-group ">
+                        <label for="imc">IMC:</label>
+                        <input type="number" step="0.1" id="imc" name="imc" required>
+                    </div>
+    
+                    <div class="col-md-6 mb-3 form-group ">
+                        <label for="tauxVitC">Taux de Vitamine C:</label>
+                        <input type="number" step="0.1" id="tauxVitC" name="tauxVitC" required>
+                    </div>
+    
+                    <div class="col-md-6 mb-3 form-group ">
+                        <label for="tauxKi67">Taux de Ki67:</label>
+                        <input type="number" step="0.1" id="tauxKi67" name="tauxKi67" required>
+                    </div>
+    
+                    <div class="col-md-6 mb-3 form-group ">
+                        <label for="tauxCortisol">Taux de Cortisol:</label>
+                        <input type="number" step="0.1" id="tauxCortisol" name="tauxCortisol" required>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div id="main-container-clinical_data">
+                <div class="col-md-6 mb-4 form-group ">
+                    <label class="form-label" for="téléversement_fichiers_data">Téléversement de Fichiers :</label>
                     <input type="file" style="margin-left: 5px;" id="téléversement_fichiers_data" name="téléversement_fichiers_data" accept=".csv">
-                </div> -->
-        
-                <!-- <div class="col-md-6 mb-4">
+                </div>
+            </div> -->
+
+            <!-- <div id="main-container-clinical_data">
+                <div class="col-md-6 mb-4 form-group ">
                     Ajoutez d'autres champs ici (transcriptomiques, métabolomiques, etc.)
-                </div> -->
-                
-            </div>
-        </div>
+                </div>
+            </div> -->
 
-        <!-- Bouton de prédiction -->
-        <div class="prediction-button">
-            <!-- ... -->
-            <button type="submit">Prédire</button>
-        </div>
+    
+            <!-- Bouton de prédiction -->
+            <button class="prediction-button" type="submit">Prédire</button>
+            
+    
+            <!-- Affichage des résultats de la prédiction -->
+            <div id="prediction_result"></div>
+        </form>
 
-        <!-- Affichage des résultats de la prédiction -->
-        <div id="prediction_result"></div>
-    </form>
+    </div>

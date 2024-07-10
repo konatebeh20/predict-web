@@ -1,0 +1,1 @@
+from .cancer_predict_website_db import db, Patient

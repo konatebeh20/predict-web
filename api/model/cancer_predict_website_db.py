@@ -2,10 +2,20 @@ from flask_sqlalchemy import SQLAlchemy
 from config.db import *
 # from datetime import datetime
 
+class Clinician(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(100), nullable=False)
+    email = db.Column(db.String(120), unique=True, nullable=False)
+    age = db.Column(db.String(10))
+    sex = db.Column(db.String(10))
+    password = db.Column(db.String(60), nullable=False)
+    predictions = db.relationship('Prediction', backref='clinician', lazy=True)
+
 
 class Patient(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(100))
+
     # patient_id = db.Column(db.String(100))
     age = db.Column(db.String(10))
     sex = db.Column(db.String(10))
@@ -29,3 +39,10 @@ class Patient(db.Model):
     vitamin_c = db.Column(db.Float)
     ki67 = db.Column(db.Float)
     cortisol = db.Column(db.Float)
+
+class Prediction(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    clinician_id = db.Column(db.Integer, db.ForeignKey('clinician.id'), nullable=False)
+    patient_id = db.Column(db.Integer, db.ForeignKey('patient.id'), nullable=False)
+    result = db.Column(db.String(50), nullable=False)
+    timestamp = db.Column(db.DateTime, nullable=False, default=db.func.current_timestamp())

@@ -9,6 +9,9 @@ import { PredictionComponent } from './prediction/prediction.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 import { FaqComponent } from './faq/faq.component';
+import { RegisterComponent } from './components/register/register.component';
+import { LoginComponent } from './register/login/login.component';
+import { PatientRegisterComponent } from './register/patient-register/patient-register.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { FaqComponent } from './faq/faq.component';
     PredictionComponent,
     ContactComponent,
     FooterComponent,
-    FaqComponent
+    FaqComponent,
+    RegisterComponent,
+    LoginComponent,
+    PatientRegisterComponent
   ],
   imports: [
     BrowserModule,
